@@ -9,7 +9,7 @@ Basic DCAT supports the indication of dataset semantics through
 * [dct:subject](http://www.dublincore.org/documents/dcmi-terms/#terms-subject) - intended to be used with a link to a value in a controlled vocabulary
 
 The semantics of these properties are relatively non-specific, particularly in relation to the properties associated with scientific observations that usually involve a well-defined protocol or sensor. 
-Additional predicates (or specializations of the generic predicated) might be used to provide more explicit descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**. 
+Additional predicates (or specializations of the generic predicates) might be used to provide more explicit descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**. 
 
 Suitable additional properties typically correspond with slots within more specialized generic- and domain-specific (metadata) standards such as [schema.org](https://schema.org/), [W3C SSN](https://www.w3.org/TR/vocab-ssn/), [DDI/DISCO](https://www.ddialliance.org/Specification/RDF/Discovery), [DATS](https://datatagsuite.github.io/docs/html/), [ISO 19115 (Geospatial)](http://wiki.esipfed.org/index.php/Category:ISO_Explorer). Information should be copied up from the specialized metadata records to support description using a x-domain research data description standard. 
 
@@ -39,6 +39,9 @@ Suitable additional properties typically correspond with slots within more speci
 ### DCAT augmented for research data
 
 ![DCAT research profile](https://raw.githubusercontent.com/CSIRO-enviro-informatics/research-profile/master/image/DCAT%20research%20data%20profile.png)
+
+In this strawman we have used additional properties and classes from W3C RDF vocabularies where available. 
+However, these might be replaced by terms from other vocabularies. 
 
 `res:` is a new namespace for research dataset metadata
 
