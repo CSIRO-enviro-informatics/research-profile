@@ -20,14 +20,14 @@ Suitable additional properties typically correspond with slots within more speci
 | [W3C Data Cube](https://www.w3.org/TR/vocab-data-cube/) | `qb:` | [qb:concept](https://www.w3.org/TR/vocab-data-cube/#reference-concepts) [qb:componentProperty](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) (also sub-properties [qb:dimension](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) [qb:measure](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) [qb:attribute](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) |
 | [DDI DISCO](https://htmlpreview.github.io/?https://raw.github.com/linked-statistics/disco-spec/master/discovery.html) | `disco:` |  `disco:variable` `disco:universe` `disco:analysisUnit` |
 | [DATS](http://www.github.com/biocaddie/WG3-MetadataSpecifications) | `dats:` | [dats:isAbout](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:producedBy](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:types](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:dimensions](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) |
-| [schema.org](https://schema.org/docs/schemas.html) | `s:` | [schema:variableMeasured](https://pending.schema.org/variableMeasured) [schema:measurementTechnique](https://schema.org/measurementTechnique) [schema:instrument](https://schema.org/instrument) [schema:usesDevice](http://schema.org/usesDevice) [schema:object](https://schema.org/object) |
+| [schema.org](https://schema.org/docs/schemas.html) | `s:` | [s:variableMeasured](https://pending.schema.org/variableMeasured) [s:measurementTechnique](https://schema.org/measurementTechnique) [s:instrument](https://schema.org/instrument) [s:usesDevice](http://schema.org/usesDevice) [s:object](https://schema.org/object) |
 | [ISO 19115](https://ddi-alliance.atlassian.net/wiki/spaces/DDI4/pages/548405259/ISO+19115+Geographic+Information+--+Metadata) | `iso19115:` | `iso19115:extent` `iso19115:rangeElementDescription` `iso19115:instrument` `iso19115:acquisitionInformation` |
 
 ### Approximate equivalences
 * `disco:universe` ~ `ssn-ext:hasUltimateFeatureOfInterest` ~ `iso19115:extent`
 * `s:object` ~ `sosa:hasFeatureOfInterest` ~ `disco:analysisUnit` ~ `dats:isAbout`
 * `s:variableMeasured` ~ `sosa:observedProperty` ~ `qb:concept` ~ `disco:variable` ~ `dats:dimensions` ~ `iso19115:rangeElementDescription`
-* `s:instrument` ~ `sosa:madeBySensor` (also `schema:usesDevice` for medical applications) ~ `iso19115:instrument`
+* `s:instrument` ~ `sosa:madeBySensor` (also `s:usesDevice` for medical applications) ~ `iso19115:instrument`
 * `s:measurementTechnique` ~ `sosa:usedProcedure` ~ `dats:producedBy` ~ `iso19115:acquisitionInformation`
 
 ## Starting points
