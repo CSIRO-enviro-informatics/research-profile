@@ -10,7 +10,11 @@ Basic DCAT supports the indication of dataset semantics through
 The semantics of these properties are relatively non-specific, particularly in relation to the properties associated with scientific observations that usually involve a well-defined protocol or sensor. 
 
 Specializations of these, or additional predicates might be used to support more explicit semantic descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**. 
-Suitable additional properties typically correspond with slots within more specialized generic- and domain-specific (metadata) standards such as [W3C SSN](https://www.w3.org/TR/vocab-ssn/), [DDI/DISCO](https://www.ddialliance.org/Specification/RDF/Discovery), [DATS](https://datatagsuite.github.io/docs/html/), [ISO 19115 (Geospatial)](http://wiki.esipfed.org/index.php/Category:ISO_Explorer). Information should be copied up from the specialized metadata records to support description using a x-domain research data description standard. 
+Suitable additional properties typically correspond with slots within more specialized generic- and domain-specific (metadata) standards such as [schema.org](https://schema.org/), [W3C SSN](https://www.w3.org/TR/vocab-ssn/), [DDI/DISCO](https://www.ddialliance.org/Specification/RDF/Discovery), [DATS](https://datatagsuite.github.io/docs/html/), [ISO 19115 (Geospatial)](http://wiki.esipfed.org/index.php/Category:ISO_Explorer). Information should be copied up from the specialized metadata records to support description using a x-domain research data description standard. 
+
+## Related work
+
+- [Science on schema.org](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md) adapted from [NSF-EarthCube project 418](https://github.com/earthcubearchitecture-project418/p418Vocabulary). 
 
 ## Candidate properties 
 
