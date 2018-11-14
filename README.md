@@ -46,8 +46,11 @@ Suitable additional properties typically correspond with slots within more speci
 
 ![schema.org research profile](https://raw.githubusercontent.com/CSIRO-enviro-informatics/research-profile/master/image/schema.org%20dataset.png)
 
-The properties shown are associated with the schema.org classes indicated, as listed at [s:Dataset](https://schema.org/Dataset), [s:Action](https://schema.org/Action). 
-`Action` is a potential super-class for act-of-observation - shown here to introduce some useful properties not normally associated with continuant entities, but likely to be useful in research dataset discovery. (Would [s:AchieveAction](https://schema.org/AchieveAction) or [s:CreateAction](https://schema.org/CreateAction) be better?)
+The properties shown are associated with the **schema.org** classes indicated, as listed at [s:Dataset](https://schema.org/Dataset), [s:Action](https://schema.org/Action). 
+
+Note that `s:Action` is a potential super-class for _act-of-observation_. It is shown here to introduce some useful properties not normally associated with "continuant" entities, but likely to be useful in research dataset discovery. (Would [s:AchieveAction](https://schema.org/AchieveAction) or [s:CreateAction](https://schema.org/CreateAction) be better?)
+
+Under **schema.org** semantics there is no specific limitation on use of properties to describe any Type, but this diagram indicates the normal expectations, as given by the `s:domainIncludes` and `s:rangeIncludes` descriptors. 
 
 ## Other concerns
 from **DDI**
