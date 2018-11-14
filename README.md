@@ -1,4 +1,4 @@
-## Metadata profiles for research dataset discovery and assessment
+# Metadata profiles for research dataset discovery and assessment
 
 _Adapted from content originally prepared through the [W3C DXWG](https://github.com/w3c/dxwg/wiki/Data-aspects-semantics)_
 
@@ -12,7 +12,7 @@ The semantics of these properties are relatively non-specific, particularly in r
 Specializations of these, or additional predicates might be used to support more explicit semantic descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**. 
 Suitable additional properties typically correspond with slots within more specialized generic- and domain-specific (metadata) standards such as [W3C SSN](https://www.w3.org/TR/vocab-ssn/), [DDI/DISCO](https://www.ddialliance.org/Specification/RDF/Discovery), [DATS](https://datatagsuite.github.io/docs/html/), [ISO 19115 (Geospatial)](http://wiki.esipfed.org/index.php/Category:ISO_Explorer). Information should be copied up from the specialized metadata records to support description using a x-domain research data description standard. 
 
-### Candidate properties 
+## Candidate properties 
 
 | Vocabulary | prefix | properties |
 |--|--| -- |
@@ -30,21 +30,21 @@ Suitable additional properties typically correspond with slots within more speci
 * `s:instrument` ~ `sosa:madeBySensor` (also `schema:usesDevice` for medical applications) ~ `iso19115:instrument`
 * `s:measurementTechnique` ~ `sosa:usedProcedure` ~ `dats:producedBy` ~ `iso19115:acquisitionInformation`
 
-### Starting points
-#### DCAT augmented for research data
+## Starting points
+### DCAT augmented for research data
 
 ![DCAT research profile](https://raw.githubusercontent.com/CSIRO-enviro-informatics/research-profile/master/image/DCAT%20research%20data%20profile.png)
 
 `res:` is a new namespace for research dataset metadata
 
-#### schema.org selected for research data
+### schema.org selected for research data
 
 ![schema.org research profile](https://raw.githubusercontent.com/CSIRO-enviro-informatics/research-profile/master/image/schema.org%20dataset.png)
 
 The properties shown are associated with the schema.org classes indicated, as listed at [s:Dataset](https://schema.org/Dataset), [s:Action](https://schema.org/Action). 
 `Action` is a potential super-class for act-of-observation - shown here to introduce some useful properties not normally associated with continuant entities, but likely to be useful in research dataset discovery. (Would [s:AchieveAction](https://schema.org/AchieveAction) or [s:CreateAction](https://schema.org/CreateAction) be better?)
 
-### Other concerns
+## Other concerns
 from **DDI**
 * collectionFrequency (different to accrualPeriodicity)
 * summary statistics ...
