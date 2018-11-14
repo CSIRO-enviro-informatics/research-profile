@@ -14,28 +14,28 @@ Suitable additional properties typically correspond with slots within more speci
 
 ### Candidate properties 
 
-| Vocabulary | properties |
-|------------|------------|
-| [W3C SSN](https://www.w3.org/TR/vocab-ssn/) | [sosa:observedProperty](https://www.w3.org/TR/vocab-ssn/#SOSAobservedProperty) [sosa:hasFeatureOfInterest](https://www.w3.org/TR/vocab-ssn/#SOSAhasFeatureOfInterest) [sosa:usedProcedure](https://www.w3.org/TR/vocab-ssn/#SOSAusedProcedure) [sosa:madeBySensor](https://www.w3.org/TR/vocab-ssn/#SOSAmadeBySensor) [sosa:phenomenonTime](https://www.w3.org/TR/vocab-ssn/#SOSAphenomenonTime) [ssne:hasUltimateFeatureOfInterest](https://w3c.github.io/sdw/proposals/ssn-extensions/#ssn-ext:hasUltimateFeatureOfInterest) |
-| [W3C Data Cube](https://www.w3.org/TR/vocab-data-cube/) | [qb:concept](https://www.w3.org/TR/vocab-data-cube/#reference-concepts) [qb:componentProperty](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) (also sub-properties [qb:dimension](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) [qb:measure](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) [qb:attribute](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) |
-| [DDI DISCO](https://htmlpreview.github.io/?https://raw.github.com/linked-statistics/disco-spec/master/discovery.html) | `disco:variable` `disco:universe` `disco:analysisUnit` |
-| [DATS](http://www.github.com/biocaddie/WG3-MetadataSpecifications) | [dats:isAbout](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:producedBy](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:types](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:dimensions](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) |
-| [schema.org](https://schema.org/docs/schemas.html) | [schema:variableMeasured](https://pending.schema.org/variableMeasured) [schema:measurementTechnique](https://schema.org/measurementTechnique) [schema:instrument](https://schema.org/instrument) [schema:usesDevice](http://schema.org/usesDevice) [schema:object](https://schema.org/object) |
-| [ISO 19115](https://ddi-alliance.atlassian.net/wiki/spaces/DDI4/pages/548405259/ISO+19115+Geographic+Information+--+Metadata) | `iso19115:extent` `iso19115:rangeElementDescription` `iso19115:instrument` `iso19115:acquisitionInformation` |
+| Vocabulary | prefix | properties |
+|--|--| -- |
+| [W3C SSN](https://www.w3.org/TR/vocab-ssn/) | `ssn:` `sosa:` `ssn-ext:` | [sosa:observedProperty](https://www.w3.org/TR/vocab-ssn/#SOSAobservedProperty) [sosa:hasFeatureOfInterest](https://www.w3.org/TR/vocab-ssn/#SOSAhasFeatureOfInterest) [sosa:usedProcedure](https://www.w3.org/TR/vocab-ssn/#SOSAusedProcedure) [sosa:madeBySensor](https://www.w3.org/TR/vocab-ssn/#SOSAmadeBySensor) [sosa:phenomenonTime](https://www.w3.org/TR/vocab-ssn/#SOSAphenomenonTime) [ssne:hasUltimateFeatureOfInterest](https://w3c.github.io/sdw/proposals/ssn-extensions/#ssn-ext:hasUltimateFeatureOfInterest) |
+| [W3C Data Cube](https://www.w3.org/TR/vocab-data-cube/) | `qb:` | [qb:concept](https://www.w3.org/TR/vocab-data-cube/#reference-concepts) [qb:componentProperty](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) (also sub-properties [qb:dimension](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) [qb:measure](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) [qb:attribute](https://www.w3.org/TR/vocab-data-cube/#reference-compspec) |
+| [DDI DISCO](https://htmlpreview.github.io/?https://raw.github.com/linked-statistics/disco-spec/master/discovery.html) | `disco:` |  `disco:variable` `disco:universe` `disco:analysisUnit` |
+| [DATS](http://www.github.com/biocaddie/WG3-MetadataSpecifications) | `dats:` | [dats:isAbout](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:producedBy](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:types](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) [dats:dimensions](https://github.com/biocaddie/WG3-MetadataSpecifications/blob/master/json-schemas/dataset_schema.json) |
+| [schema.org](https://schema.org/docs/schemas.html) | `s:` | [schema:variableMeasured](https://pending.schema.org/variableMeasured) [schema:measurementTechnique](https://schema.org/measurementTechnique) [schema:instrument](https://schema.org/instrument) [schema:usesDevice](http://schema.org/usesDevice) [schema:object](https://schema.org/object) |
+| [ISO 19115](https://ddi-alliance.atlassian.net/wiki/spaces/DDI4/pages/548405259/ISO+19115+Geographic+Information+--+Metadata) | `iso19115:` | `iso19115:extent` `iso19115:rangeElementDescription` `iso19115:instrument` `iso19115:acquisitionInformation` |
 
 ### Approximate equivalences
-* `disco:universe` ~ `ssne:hasUltimateFeatureOfInterest` ~ `iso19115:extent`
-* `schema:object` ~ `sosa:hasFeatureOfInterest` ~ `disco:analysisUnit` ~ `dats:isAbout`
-* `schema:variableMeasured` ~ `sosa:observedProperty` ~ `qb:concept` ~ `disco:variable` ~ `dats:dimensions` ~ `iso19115:rangeElementDescription`
-* `schema:instrument` ~ `sosa:madeBySensor` (also `schema:usesDevice` for medical applications) ~ `iso19115:instrument`
-* `schema:measurementTechnique` ~ `sosa:usedProcedure` ~ `dats:producedBy` ~ `iso19115:acquisitionInformation`
+* `disco:universe` ~ `ssn-ext:hasUltimateFeatureOfInterest` ~ `iso19115:extent`
+* `s:object` ~ `sosa:hasFeatureOfInterest` ~ `disco:analysisUnit` ~ `dats:isAbout`
+* `s:variableMeasured` ~ `sosa:observedProperty` ~ `qb:concept` ~ `disco:variable` ~ `dats:dimensions` ~ `iso19115:rangeElementDescription`
+* `s:instrument` ~ `sosa:madeBySensor` (also `schema:usesDevice` for medical applications) ~ `iso19115:instrument`
+* `s:measurementTechnique` ~ `sosa:usedProcedure` ~ `dats:producedBy` ~ `iso19115:acquisitionInformation`
 
 ### Starting points
 #### DCAT augmented for research data
 
 ![DCAT research profile](https://raw.githubusercontent.com/CSIRO-enviro-informatics/research-profile/master/image/DCAT%20research%20data%20profile.png)
 
-**res:** is a new namespace for research dataset metadata
+`res:` is a new namespace for research dataset metadata
 
 #### schema.org selected for research data
 
