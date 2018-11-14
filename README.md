@@ -7,9 +7,10 @@ Basic DCAT supports the indication of dataset semantics through
 * [dcat:keyword](https://w3c.github.io/dxwg/dcat/#Property:dataset_keyword) - which has a literal value
 * [dcat:theme](https://w3c.github.io/dxwg/dcat/#Property:dataset_theme) - which uses a `skos:Concept` from a controlled vocabulary
 * [dct:subject](http://www.dublincore.org/documents/dcmi-terms/#terms-subject) - intended to be used with a link to a value in a controlled vocabulary
-The semantics of these properties are relatively non-specific, particularly in relation to the properties associated with scientific observations that usually involve a well-defined protocol or sensor. 
 
-Specializations of these, or additional predicates might be used to support more explicit semantic descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**. 
+The semantics of these properties are relatively non-specific, particularly in relation to the properties associated with scientific observations that usually involve a well-defined protocol or sensor. 
+Additional predicates (or specializations of the generic predicated) might be used to provide more explicit descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**. 
+
 Suitable additional properties typically correspond with slots within more specialized generic- and domain-specific (metadata) standards such as [schema.org](https://schema.org/), [W3C SSN](https://www.w3.org/TR/vocab-ssn/), [DDI/DISCO](https://www.ddialliance.org/Specification/RDF/Discovery), [DATS](https://datatagsuite.github.io/docs/html/), [ISO 19115 (Geospatial)](http://wiki.esipfed.org/index.php/Category:ISO_Explorer). Information should be copied up from the specialized metadata records to support description using a x-domain research data description standard. 
 
 ## Related work
