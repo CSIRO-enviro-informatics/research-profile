@@ -2,22 +2,22 @@
 
 _Adapted from content originally prepared through the [W3C DXWG](https://github.com/w3c/dxwg/wiki/Data-aspects-semantics)_
 
-Generic metadata such as [DCAT](https://w3c.github.io/dxwg/dcat/) and [schema.org](https://schema.org/) is used in indexes to support dataset discovery. 
-Basic DCAT supports the indication of dataset semantics through 
+Generic metadata such as [DCAT](https://w3c.github.io/dxwg/dcat/) and [schema.org](https://schema.org/) is used in indexes to support dataset discovery.
+Basic DCAT supports the indication of dataset semantics through
 * [dcat:keyword](https://w3c.github.io/dxwg/dcat/#Property:dataset_keyword) - which has a literal value
 * [dcat:theme](https://w3c.github.io/dxwg/dcat/#Property:dataset_theme) - which uses a `skos:Concept` from a controlled vocabulary
 * [dct:subject](http://www.dublincore.org/documents/dcmi-terms/#terms-subject) - intended to be used with a link to a value in a controlled vocabulary
 
-The semantics of these properties are relatively non-specific, particularly in relation to the properties associated with scientific observations that usually involve a well-defined protocol or sensor. 
-Additional predicates (or specializations of the generic predicates) might be used to provide more explicit descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**. 
+The semantics of these properties are relatively non-specific, particularly in relation to the properties associated with scientific observations that usually involve a well-defined protocol or sensor.
+Additional predicates (or specializations of the generic predicates) might be used to provide more explicit descriptions of datasets, to support cross-domain research data **discovery** and initial **assessment**.
 
-Suitable additional properties typically correspond with slots within more specialized generic- and domain-specific (metadata) standards such as [schema.org](https://schema.org/), [W3C SSN](https://www.w3.org/TR/vocab-ssn/), [DDI/DISCO](https://www.ddialliance.org/Specification/RDF/Discovery), [DATS](https://datatagsuite.github.io/docs/html/), [ISO 19115 (Geospatial)](http://wiki.esipfed.org/index.php/Category:ISO_Explorer). Information should be copied up from the specialized metadata records to support description using a x-domain research data description standard. 
+Suitable additional properties typically correspond with slots within more specialized generic- and domain-specific (metadata) standards such as [schema.org](https://schema.org/), [W3C SSN](https://www.w3.org/TR/vocab-ssn/), [DDI/DISCO](https://www.ddialliance.org/Specification/RDF/Discovery), [DATS](https://datatagsuite.github.io/docs/html/), [ISO 19115 (Geospatial)](http://wiki.esipfed.org/index.php/Category:ISO_Explorer). Information should be copied up from the specialized metadata records to support description using a x-domain research data description standard.
 
 ## Related work
 
-- [Science on schema.org](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md) adapted from [NSF-EarthCube project 418](https://github.com/earthcubearchitecture-project418/p418Vocabulary). 
+- [Science on schema.org](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md) adapted from [NSF-EarthCube project 418](https://github.com/earthcubearchitecture-project418/p418Vocabulary).
 
-## Candidate properties 
+## Candidate properties
 
 | Vocabulary | prefix | properties |
 |--|--| -- |
@@ -29,31 +29,30 @@ Suitable additional properties typically correspond with slots within more speci
 | [ISO 19115](https://ddi-alliance.atlassian.net/wiki/spaces/DDI4/pages/548405259/ISO+19115+Geographic+Information+--+Metadata) | `iso19115:` | `iso19115:extent` `iso19115:rangeElementDescription` `iso19115:instrument` `iso19115:acquisitionInformation` |
 
 ### Approximate equivalences
-* `disco:universe` ~ `ssn-ext:hasUltimateFeatureOfInterest` ~ `iso19115:extent`
-* `s:object` ~ `sosa:hasFeatureOfInterest` ~ `disco:analysisUnit` ~ `dats:isAbout`
-* `s:variableMeasured` ~ `sosa:observedProperty` ~ `qb:concept` ~ `disco:variable` ~ `dats:dimensions` ~ `iso19115:rangeElementDescription`
-* `s:instrument` ~ `sosa:madeBySensor` (also `s:usesDevice` for medical applications) ~ `iso19115:instrument`
-* `s:measurementTechnique` ~ `sosa:usedProcedure` ~ `dats:producedBy` ~ `iso19115:acquisitionInformation`
+* `ssn-ext:hasUltimateFeatureOfInterest` ~ `disco:universe` ~ `iso19115:extent`
+* `sosa:hasFeatureOfInterest` ~ `disco:analysisUnit` ~ `dats:isAbout` ~ `s:object`
+* `sosa:observedProperty` ~ `qb:concept` ~ `disco:variable` ~ `dats:dimensions` ~ `iso19115:rangeElementDescription`~ `s:variableMeasured`
+* `sosa:madeBySensor` ~ `iso19115:instrument` ~ `s:instrument`  (also `s:usesDevice` for medical applications)
+* `sosa:usedProcedure` ~ `dats:producedBy` ~ `iso19115:acquisitionInformation` ~ `s:measurementTechnique`
+
+![Metadata for 'rectangular' datasets](image/Rectangular%20data.png)
 
 ## Starting points
 ### DCAT augmented for research data
 
-![DCAT research profile](https://raw.githubusercontent.com/CSIRO-enviro-informatics/research-profile/master/image/DCAT%20research%20data%20profile.png)
+![DCAT research profile](image/DCAT%20research%20data%20profile.png)
 
-In this strawman we have used additional properties and classes from W3C RDF vocabularies where available. 
-However, these might be replaced by terms from other vocabularies. 
+In this strawman the DCAT `Dataset` description is augmented with additional properties and classes, taken from W3C RDF vocabularies where available.
 
 `res:` is a new namespace for research dataset metadata
 
 ### schema.org selected for research data
 
-![schema.org research profile](https://raw.githubusercontent.com/CSIRO-enviro-informatics/research-profile/master/image/schema.org%20dataset.png)
+![schema.org research profile](image/schema.org%20dataset.png)
 
-The properties shown are associated with the **schema.org** classes indicated, as listed at [s:Dataset](https://schema.org/Dataset), [s:Action](https://schema.org/Action). 
+The properties shown in this strawman are associated with the **schema.org** classes indicated, as listed at [s:Dataset](https://schema.org/Dataset), [s:Action](https://schema.org/Action). Under schema.org semantics there is no limitation on use of properties to describe any Type, but this diagram indicates the normal expectations, as given by the `s:domainIncludes` and `s:rangeIncludes` descriptors for the properties shown.
 
-Note that `s:Action` is a potential super-class for _act-of-observation_. It is shown here to introduce some useful properties not normally associated with "continuant" entities, but likely to be useful in research dataset discovery. (Would [s:AchieveAction](https://schema.org/AchieveAction) or [s:CreateAction](https://schema.org/CreateAction) be better?)
-
-Under **schema.org** semantics there is no specific limitation on use of properties to describe any Type, but this diagram indicates the normal expectations, as given by the `s:domainIncludes` and `s:rangeIncludes` descriptors. 
+`s:Action` is a potential super-class for _act-of-observation_. It is introduced here to show some useful properties of research data that are not normally associated with "continuant" entities, but are likely to be useful in research dataset discovery. (Would [s:AchieveAction](https://schema.org/AchieveAction) or [s:CreateAction](https://schema.org/CreateAction) be better?)
 
 ## Other concerns
 from **DDI**
@@ -65,5 +64,5 @@ from **Geospatial**
 * spatial resolution
 * spatial aggregation level
 
-Other important sources to correlate 
-* THREDDS/netCDF 
+Other important sources to correlate
+* THREDDS/netCDF
