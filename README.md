@@ -42,7 +42,7 @@ Suitable additional properties typically correspond with slots within more speci
 
 ![DCAT research profile](image/DCAT%20research%20data%20profile.png)
 
-In this strawman the DCAT `Dataset` description is augmented with additional properties and classes, taken from W3C RDF vocabularies where available.
+In this strawman the DCAT `Dataset` description is augmented with additional properties and classes, taken from W3C RDF vocabularies where available. The set of additional properties were identified in the workshop on [Interoperability of Metadata Standards in Cross-Domain Science, Health, and Social Science Applications](https://ddi-alliance.atlassian.net/wiki/spaces/DDI4/pages/433553433/Interoperability+of+Metadata+Standards+in+Cross-Domain+Science+Health+and+Social+Science+Applications). 
 
 `res:` is a new namespace for research dataset metadata
 
