@@ -15,10 +15,11 @@ Suitable additional properties typically correspond with slots within more speci
 
 ## Related work
 
+- [Research Objects](http://www.researchobject.org/specifications/)
+    - UK-based?) a number of initiatives and approaches trying to describe and associate research content together in a machine-readable mechanism so that it can be more easily shared and exchanged.
 - [Science on schema.org](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md) adapted from [NSF-EarthCube project 418](https://github.com/earthcubearchitecture-project418/p418Vocabulary)
 - [Inventory of relevant metadata schemas](https://ddi-alliance.atlassian.net/wiki/spaces/DDI4/pages/535494691/Background+Materials+for+Use+in+Workshop)
     - [ISO 19115](https://ddi-alliance.atlassian.net/wiki/spaces/DDI4/pages/548405259/ISO+19115+Geographic+Information+--+Metadata)
-- [Research Objects](http://www.researchobject.org/specifications/)
 
 ## Candidate properties
 
